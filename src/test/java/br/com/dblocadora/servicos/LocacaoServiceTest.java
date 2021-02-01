@@ -62,7 +62,11 @@ public class LocacaoServiceTest {
         assertEquals(usuario.getNome(), locacao.getUsuario().getNome());
     }
 
-
+    /*
+    *   você pode tornar seus testes mais específicos
+    *   você obtém uma exceção mais detalhada, se os testes falharem
+    *   mais fácil de ler o teste
+    */
     @Test
     public void deveria_conter_usuario_que_alugou_coreMatchers(){
         //cenário  ou pré-condição
@@ -75,6 +79,19 @@ public class LocacaoServiceTest {
 
         assertEquals(usuario.getNome(), locacao.getUsuario().getNome());
         assertThat(usuario.getNome(), equalTo(locacao.getUsuario().getNome()));
+    }
+
+    @Test
+    public void deveria_ter_mesma_referencia(){
+        //cenário  ou pré-condição
+        LocacaoService service = new LocacaoService();
+        Usuario usuario = new Usuario("Usuario 1");
+        Filme filme = new Filme("Filme 1", 1,  5.0);
+
+        //ação
+        Locacao locacao = service.alugarFilme(usuario, filme);
+
+        assertSame(locacao, locacao);
     }
 
     @Test
