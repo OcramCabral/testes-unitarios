@@ -12,15 +12,15 @@ Tarefas liberadas dia 29/01:
 * Organizar os testes em pastas mais coerente a sua finalidade;
 * Utilizar os recursos do assert, para as validações dos métodos de teste;
 * Criar uma Classe de teste, dentro do escopo de testes, chamada AssertTest, com os exemplos de:
-	* Assert.assertTrue() validando true e observando seu comportamento;
+	* Assert.assertTrue() validando true e observando seu comportamento; OK
 	* Assert.assertTrue() validando false e observando seu comportamento;
-	* Assert.assertFalse() validando true e observando seu comportamento;
+	* Assert.assertFalse() validando true e observando seu comportamento; OK
 	* Assert.assertFalse() validando false e observando seu comportamento;
-	* Assert.assertEquals() validando dois inteiros primitivos e observando seu comportamento;
-	* Assert.assertEquals() validando um inteiro primitivo e um objeto do tipo Integer e observando seu comportamento;
-	* Assert.assertEquals() validando dois objetos do tipo Integer e observando seu comportamento;
-	* Assert.assertEquals() validando dois Strings e observando seu comportamento;
-	* Assert.assertEquals() validando dois valores primitivos do tipo double e observando seu comportamento;
+	* Assert.assertEquals() validando dois inteiros primitivos e observando seu comportamento; OK
+	* Assert.assertEquals() validando um inteiro primitivo e um objeto do tipo Integer e observando seu comportamento; OK
+	* Assert.assertEquals() validando dois objetos do tipo Integer e observando seu comportamento; OK
+	* Assert.assertEquals() validando dois Strings e observando seu comportamento; OK
+	* Assert.assertEquals() validando dois valores primitivos do tipo double e observando seu comportamento; OK
 	* Assert.assertSame() validando o mesmo objeto do tipo Integer e observando seu comportamento;
 	* Assert.assertSame() validando dois objetos do tipo Integer e observando seu comportamento;
 	* Escolher um assert para validar um objeto nulo e observando seu comportamento;
