@@ -1,6 +1,8 @@
 package br.com.dblocadora.servicos;
 
 import static org.junit.Assert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.CoreMatchers.equalTo;
 
 import org.junit.Test;
 import br.com.dblocadora.entidades.Filme;
@@ -24,8 +26,9 @@ public class LocacaoServiceTest {
         Locacao locacao = service.alugarFilme(usuario, filme);
 
         assertTrue(DataUtils.isMesmaData(locacao.getDataLocacao(), new Date()));
+        assertTrue(locacao!=null);
         assertFalse(DataUtils.isMesmaData(locacao.getDataRetorno(), DataUtils.obterDataComDiferencaDias(2)));
-
+        assertFalse(locacao==null);
     }
 
     @Test
@@ -57,6 +60,21 @@ public class LocacaoServiceTest {
         Locacao locacao = service.alugarFilme(usuario, filme);
 
         assertEquals(usuario.getNome(), locacao.getUsuario().getNome());
+    }
+
+
+    @Test
+    public void deveria_conter_usuario_que_alugou_coreMatchers(){
+        //cenário  ou pré-condição
+        LocacaoService service = new LocacaoService();
+        Usuario usuario = new Usuario("Usuario 1");
+        Filme filme = new Filme("Filme 1", 1,  5.0);
+
+        //ação
+        Locacao locacao = service.alugarFilme(usuario, filme);
+
+        assertEquals(usuario.getNome(), locacao.getUsuario().getNome());
+        assertThat(usuario.getNome(), equalTo(locacao.getUsuario().getNome()));
     }
 
     @Test
