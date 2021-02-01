@@ -28,7 +28,7 @@ Tarefas liberadas dia 29/01:
 	
 * Organizar os testes do terceiro passo para usar o métodos mais coerentes do Assert.assertThat + CoreMatchers;
 	* Utilizar CoreMatchers com is(equalTo()) e is(not()); OK
-	* Realizar uma cópia das validações acima utilizando o recurso da notação @Rule do JUnit instanciando um objeto com nome error da classe ErrorColetor, trocando a validação do Assert.assertThat, por error.checkThat() analise a diferença entre as duas abordagens para revisarmos juntos;
+	* Realizar uma cópia das validações acima utilizando o recurso da notação @Rule do JUnit instanciando um objeto com nome error da classe ErrorColetor, trocando a validação do Assert.assertThat, por error.checkThat() analise a diferença entre as duas abordagens para revisarmos juntos; Ok
 	
 * Observação importante 1, confirmar que os testes passam e falham, evitando falsos positivos.	
 * Observação importante 2, conforme for avançando nas tarefas, atualizar readme com os testes realizados.
