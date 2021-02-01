@@ -21,9 +21,9 @@ Tarefas liberadas dia 29/01:
 	* Assert.assertEquals() validando dois objetos do tipo Integer e observando seu comportamento; OK
 	* Assert.assertEquals() validando dois Strings e observando seu comportamento; OK
 	* Assert.assertEquals() validando dois valores primitivos do tipo double e observando seu comportamento; OK
-	* Assert.assertSame() validando o mesmo objeto do tipo Integer e observando seu comportamento;
-	* Assert.assertSame() validando dois objetos do tipo Integer e observando seu comportamento;
-	* Escolher um assert para validar um objeto nulo e observando seu comportamento;
+	* Assert.assertSame() validando o mesmo objeto do tipo Integer e observando seu comportamento; OK
+	* Assert.assertSame() validando dois objetos do tipo Integer e observando seu comportamento; OK
+	* Escolher um assert para validar um objeto nulo e observando seu comportamento; OK
 	* Validar todos os exemplos anteriores com suas variações negativas AssertNot... e observando seu comportamento;
 	
 * Organizar os testes do terceiro passo para usar o métodos mais coerentes do Assert.assertThat + CoreMatchers;
