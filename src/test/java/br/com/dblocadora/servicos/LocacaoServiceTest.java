@@ -35,7 +35,7 @@ public class LocacaoServiceTest {
         filme = new Filme("Filme 1", 1,  5.0);
 
         //ação
-        locacao = service.alugarFilme(usuario, filme);
+        //locacao = service.alugarFilme(usuario, filme);
     }
 
     @Test
@@ -59,11 +59,11 @@ public class LocacaoServiceTest {
         assertEquals(usuario.getNome(), locacao.getUsuario().getNome());
     }
 
-    /*
-    *   você pode tornar seus testes mais específicos
+  /*  *   você pode tornar seus testes mais específicos
     *   você obtém uma exceção mais detalhada, se os testes falharem
-    *   mais fácil de ler o teste
-    */
+    *   mais fácil de ler o teste*/
+
+
     @Test
     public void deveria_conter_usuario_que_alugou_coreMatchers(){
         assertEquals(usuario.getNome(), locacao.getUsuario().getNome());
@@ -82,9 +82,12 @@ public class LocacaoServiceTest {
 
     @Test
     public void deveria_passar_em_um_teste_e_falhar_nos_outros(){
-        collector.checkThat(1, equalTo(2));
-        collector.checkThat(true, is(false));
+        //collector.checkThat(1, equalTo(2));
+        //collector.checkThat(true, is(false));
         collector.checkThat(false, is(false));
     }
+
+
+
 
 }

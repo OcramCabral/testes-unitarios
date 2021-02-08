@@ -9,7 +9,8 @@ import br.com.dblocadora.utils.DataUtils;
 
 public class LocacaoService {
 	
-	public Locacao alugarFilme(Usuario usuario, Filme filme) {
+	public Locacao alugarFilme(Usuario usuario, Filme filme) throws Exception {
+		if(filme.getEstoque() == 0) throw new Exception("Nenhum filme no estoque");
 		Locacao locacao = new Locacao();
 		locacao.setFilme(filme);
 		locacao.setUsuario(usuario);
@@ -28,7 +29,7 @@ public class LocacaoService {
 	}
 
 	public static void main(String[] args) {
-		//cenário  ou pré-condição
+		/*//cenário  ou pré-condição
 		LocacaoService service = new LocacaoService();
 		Usuario usuario = new Usuario("Usuario 1");
 		Filme filme = new Filme("Filme 1", 1,  5.0);
@@ -45,6 +46,6 @@ public class LocacaoService {
 		//I = Independent;
 		//R = Repeatable;
 		//S = Self-Veryfying
-		//T = Timely
+		//T = Timely*/
 	}
 }

@@ -1,10 +1,8 @@
 package br.com.dblocadora.servicos;
 
 import br.com.dblocadora.entidades.Filme;
-import br.com.dblocadora.entidades.Locacao;
 import br.com.dblocadora.entidades.Usuario;
 import br.com.dblocadora.utils.DataUtils;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Date;
@@ -24,7 +22,7 @@ public class LocacaoServiceTestWithoutRule {
         Filme filme = new Filme("Filme 1", 1,  5.0);
 
         //ação
-        Locacao locacao = service.alugarFilme(usuario, filme);
+        //Locacao locacao = service.alugarFilme(usuario, filme);
 
         assertTrue(DataUtils.isMesmaData(locacao.getDataLocacao(), new Date()));
         assertTrue(locacao!=null);
@@ -40,7 +38,7 @@ public class LocacaoServiceTestWithoutRule {
         Filme filme = new Filme("Filme 1", 1,  5.0);
 
         //ação
-        Locacao locacao = service.alugarFilme(usuario, filme);
+       // Locacao locacao = service.alugarFilme(usuario, filme);
 
         //Problema quantidade do estoque não é reduzida
         assertEquals(1, filme.getEstoque().intValue(), 0.0001);
@@ -58,16 +56,16 @@ public class LocacaoServiceTestWithoutRule {
         Filme filme = new Filme("Filme 1", 1,  5.0);
 
         //ação
-        Locacao locacao = service.alugarFilme(usuario, filme);
+       // Locacao locacao = service.alugarFilme(usuario, filme);
 
         assertEquals(usuario.getNome(), locacao.getUsuario().getNome());
     }
 
-    /*
-     *   você pode tornar seus testes mais específicos
+    /* *   você pode tornar seus testes mais específicos
      *   você obtém uma exceção mais detalhada, se os testes falharem
-     *   mais fácil de ler o teste
-     */
+     *   mais fácil de ler o teste*/
+
+
     @Test
     public void deveria_conter_usuario_que_alugou_coreMatchers(){
         //cenário  ou pré-condição
@@ -76,7 +74,7 @@ public class LocacaoServiceTestWithoutRule {
         Filme filme = new Filme("Filme 1", 1,  5.0);
 
         //ação
-        Locacao locacao = service.alugarFilme(usuario, filme);
+       // Locacao locacao = service.alugarFilme(usuario, filme);
 
         assertEquals(usuario.getNome(), locacao.getUsuario().getNome());
         assertThat(usuario.getNome(), equalTo(locacao.getUsuario().getNome()));
@@ -90,7 +88,7 @@ public class LocacaoServiceTestWithoutRule {
         Filme filme = new Filme("Filme 1", 1,  5.0);
 
         //ação
-        Locacao locacao = service.alugarFilme(usuario, filme);
+      //  Locacao locacao = service.alugarFilme(usuario, filme);
 
         assertSame(locacao, locacao);
     }
@@ -103,7 +101,7 @@ public class LocacaoServiceTestWithoutRule {
         Filme filme = new Filme("Filme 1", 1,  5.0);
 
         //ação
-        Locacao locacao = service.alugarFilme(usuario, filme);
+       // Locacao locacao = service.alugarFilme(usuario, filme);
 
         assertEquals(filme.getPrecoLocacao(), locacao.getFilme().getPrecoLocacao());
     }
